@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.baisi.security.mapper.UserMapper">
+    <select id="getAll" resultType="user">
+        select * from user;
+    </select>
+    <select id="getById" resultType="user" parameterType="Integer">
+        select * from user where id = #{id};
+    </select>
+    <update id="update" parameterType="com.baisi.security.entity.User">
+        update user set username = #{username},telephone = #{telephone},mail = #{mail},password = #{password},status = #{status} where id = #{id};
+<!--        <set>-->
+<!--            <if test="username != null">-->
+<!--                username = #{username}-->
+<!--            </if>-->
+<!--            <if test="telephone != null">-->
+<!--                telephone = #{telephone}-->
+<!--            </if>-->
+<!--            <if test="mail != null">-->
+<!--                mail = #{mail}-->
+<!--            </if>-->
+<!--            <if test="password != null">-->
+<!--                password = #{password}-->
+<!--            </if>-->
+<!--            <if test="status != null">-->
+<!--                status = #{status}-->
+<!--            </if>-->
+<!--        </set>-->
+    </update>
+    <insert id="add" parameterType="com.baisi.security.entity.User">
+        insert into user(username,telephone,mail,password,status) values (#{username},#{telephone},#{mail},#{password},#{status});
+    </insert>
+    <delete id="remove" parameterType="Integer">
+        delete from user where id = #{id};
+    </delete>
+</mapper>
