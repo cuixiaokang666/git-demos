@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table align="center" border="1px" height="150px" width="240px">
+    <form th:action="@{/login}" method="post">
+            <tr>
+                <td>
+                    用户名:<input name="username" type="text"/><br/>
+                    输密码:<input name="password" type="password"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="submit" value="登录"/>
+                </td>
+            </tr>
+
+    </form>
+</table>
+
+</body>
+</html>
