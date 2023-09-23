@@ -6,6 +6,5 @@ public class Test {
         System.out.println("git word");
         System.out.println("HOLle git test");
         System.out.println("abcde");
-        Systen.out.println("崔晓抗");
     }
 }
